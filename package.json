@@ -1,0 +1,13 @@
+{
+  "name": "onkar-pawar-portfolio",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Static personal portfolio for Onkar K. Pawar — Java Backend Developer.",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "node build.mjs && npx --yes serve . -l 8080",
+    "preview": "npx --yes serve . -l 8080"
+  },
+  "engines": { "node": ">=18" }
+}
