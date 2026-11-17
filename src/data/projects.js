@@ -116,7 +116,7 @@ export const projects = [
     ],
     tech: ['Java', 'Spring Boot', 'Spring Modulith', 'Oracle 23ai', 'Flyway', 'React', 'TypeScript', 'GitHub Actions', 'nginx'],
     impact: [
-      '369 automated tests (API, ledger golden-scenario and module-boundary tests) run in CI.',
+      '360+ automated tests (API, ledger golden-scenario and module-boundary tests) run in CI.',
       'Worked export order posts 15 documents end to end, passes all 10 ledger-integrity checks and reports a 22.8% order margin (&#8377;95,250 on &#8377;4.18 lakh of export sales).',
       'Built in about a month: 81 commits, 351 Java classes, 25 migrations.'
     ]
