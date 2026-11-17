@@ -17,11 +17,10 @@ src/data/          the resume content (edit here)
   projects.js        projects, responsibilities, security, impact
   skills.js          skill groups
   credentials.js     education, certifications, awards, headline metrics
-  architecture.js    documented project architecture
 
 src/templates/     the markup
   page.js            document shell, SEO/Open Graph, JSON-LD
-  sections.js        every page section + the architecture SVG
+  sections.js        every page section
   icons.js           inline SVG icons (no icon font)
 
 assets/css/style.css   hand-written stylesheet, light + dark themes

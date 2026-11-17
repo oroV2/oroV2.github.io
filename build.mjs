@@ -18,7 +18,6 @@ import { profile } from './src/data/profile.js';
 import { experience } from './src/data/experience.js';
 import { projects } from './src/data/projects.js';
 import { skills } from './src/data/skills.js';
-import { architecture } from './src/data/architecture.js';
 import {
   education,
   certifications,
@@ -35,7 +34,6 @@ const html = renderPage({
   experience,
   projects,
   skills,
-  architecture,
   education,
   certifications,
   awards,

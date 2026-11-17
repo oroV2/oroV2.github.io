@@ -70,7 +70,7 @@
 
     <nav class="site-nav" id="site-nav" aria-label="Primary">
       <ul>
-        <li><a href="#about">About</a></li><li><a href="#experience">Experience</a></li><li><a href="#projects">Projects</a></li><li><a href="#architecture">Architecture</a></li><li><a href="#skills">Skills</a></li><li><a href="#education">Education</a></li><li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li><li><a href="#experience">Experience</a></li><li><a href="#projects">Projects</a></li><li><a href="#skills">Skills</a></li><li><a href="#education">Education</a></li><li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
 
@@ -430,37 +430,37 @@
 
           <ul class="chips chips--tech" role="list"><li class="chip">Java</li><li class="chip">Spring Boot</li><li class="chip">Spring Modulith</li><li class="chip">Oracle 23ai</li><li class="chip">Flyway</li><li class="chip">React</li><li class="chip">TypeScript</li><li class="chip">GitHub Actions</li><li class="chip">nginx</li></ul>
         </article>
-        <article class="project-card" data-reveal data-reveal-delay="1" aria-labelledby="project-secure-microservices">
+        <article class="project-card" data-reveal data-reveal-delay="1" aria-labelledby="project-pfms-bank-integration">
           <div class="project-top">
-            <p class="project-context">IDBI Intech — built from scratch</p>
-            <h3 id="project-secure-microservices">Secure Microservices Platform</h3>
-            <p class="project-purpose">A secure, scalable microservices architecture with LDAP authentication and end-to-end encrypted communication between every service in the platform.</p>
+            <p class="project-context">IDBI Intech &mdash; two bank clients</p>
+            <h3 id="project-pfms-bank-integration">PFMS Bank Integration Services &mdash; CSB Bank &amp; Equitas Bank</h3>
+            <p class="project-purpose">A suite of Spring Boot batch and integration services that connect the Public Financial Management System (PFMS/CPSMS) to two banks &mdash; payment requests and responses, account validation, balances, statements and reconciliation reports.</p>
           </div>
 
-          <p class="project-role"><span class="project-role-key">Role</span>Senior Executive — designed and built the platform from scratch</p>
+          <p class="project-role"><span class="project-role-key">Role</span>Senior Executive &mdash; developer of the integration services</p>
 
           <div class="project-block">
             <h4>What I built</h4>
-            <ul class="bullets bullets--sm"><li>Built a React.js frontend with LDAP login and AES encryption for secure client-to-server communication.</li><li>Implemented a Gateway Server for centralized authentication and call filtering across the platform.</li><li>Secured inter-service communication with multi-level JWT-based and database-driven token authentication.</li><li>Applied end-to-end AES encryption with PKCS7 padding for data exchange between the Gateway Server, Eureka Server and the microservices.</li><li>Leveraged Eureka for service discovery and load balancing to ensure reliability and performance.</li></ul>
+            <ul class="bullets bullets--sm"><li>Built 20+ independent Spring Boot services (about 52K lines of Java): payment request and response, account validation, acknowledgement reader, pull/push file transfer, transaction balance and history, quarterly interest, DSC enrollment, FCRA account report and NACH file generation.</li><li>CSB Bank: integrated through the bank&rsquo;s APIs &mdash; OAuth2 client-credentials tokens, reactive WebClient calls and encrypted request/response payloads.</li><li>Equitas Bank: integrated through database linkage, with Oracle-backed payment tables, batch queries and status tracking (initiated, success, rejected).</li><li>Processed payment files with XSD validation and XML digital-signature (DSC) verification; scheduled jobs with cron-driven triggers and a toggle to pause them; SFTP transfers and e-mail alerts on failures and reminders.</li><li>Added a React screen to fetch bank balances.</li></ul>
           </div>
 
           <div class="project-block">
             <h4><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3 4.5 6v5.5c0 4.4 3.1 7.9 7.5 9.5 4.4-1.6 7.5-5.1 7.5-9.5V6L12 3Z"/><path d="M9.5 12.2 11.4 14l3.4-3.6"/></svg><span>Security</span></h4>
-            <ul class="chips chips--sec" role="list"><li class="chip">LDAP authentication</li><li class="chip">AES encryption (PKCS7 padding)</li><li class="chip">Multi-level JWT authentication</li><li class="chip">Database-driven token authentication</li><li class="chip">Gateway call filtering</li></ul>
+            <ul class="chips chips--sec" role="list"><li class="chip">OAuth2 client-credentials</li><li class="chip">AES / RSA encryption</li><li class="chip">XML digital-signature (DSC) verification</li><li class="chip">Encrypted configuration passwords</li></ul>
           </div>
 
           <dl class="project-meta">
-            <div class="meta-row"><dt>Platform</dt><dd>React.js &middot; Spring Boot &middot; Java 17 &middot; Hibernate</dd></div>
-            <div class="meta-row"><dt>Database</dt><dd>MySQL &middot; Oracle</dd></div>
-            <div class="meta-row"><dt>App server</dt><dd>Tomcat</dd></div>
+            <div class="meta-row"><dt>Platform</dt><dd>Java &middot; Spring Boot &middot; Spring Data JPA &middot; Spring WebFlux &middot; React</dd></div>
+            <div class="meta-row"><dt>Database</dt><dd>Oracle &middot; MySQL</dd></div>
+            
           </dl>
 
           <div class="project-block">
             <h4>Impact</h4>
-            <ul class="bullets bullets--sm bullets--impact"><li>70% improvement in application performance through microservices architecture.</li><li>40% increase in enterprise security compliance through LDAP and multi-level JWT authentication.</li><li>7+ microservices architected and deployed with Docker and CI/CD pipelines.</li></ul>
+            <ul class="bullets bullets--sm bullets--impact"><li>Delivered for two bank clients on the same PFMS payment flow, using two integration styles (API and database linkage).</li><li>Reusable service pattern across both banks: scheduler, mail alerts, DB health check and centralised exception handling.</li></ul>
           </div>
 
-          <ul class="chips chips--tech" role="list"><li class="chip">React.js</li><li class="chip">Crypto (AES)</li><li class="chip">Spring Boot</li><li class="chip">Spring Cloud Gateway</li><li class="chip">Eureka</li><li class="chip">JWT</li><li class="chip">Hibernate</li><li class="chip">SQL</li></ul>
+          <ul class="chips chips--tech" role="list"><li class="chip">Java</li><li class="chip">Spring Boot</li><li class="chip">WebClient</li><li class="chip">Oracle</li><li class="chip">XML / XSD</li><li class="chip">SFTP (JSch)</li><li class="chip">Cron scheduling</li><li class="chip">Logback</li></ul>
         </article>
         <article class="project-card" data-reveal data-reveal-delay="2" aria-labelledby="project-expenzing-mobile">
           <div class="project-top">
@@ -559,153 +559,6 @@
           <ul class="chips chips--tech" role="list"><li class="chip">HTML</li><li class="chip">CSS</li><li class="chip">JavaScript</li><li class="chip">SEO</li></ul>
         </article>
     </div>
-  </div>
-</section>
-
-<section id="architecture" class="section" aria-labelledby="architecture-title">
-  <div class="shell">
-    
-  <header class="section-head" data-reveal>
-    <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Engineering</p>
-    <h2 id="architecture-title">Architecture</h2>
-    <p class="section-lead">This diagram reflects the architecture as described in the resume source document. Only components stated there are shown.</p>
-  </header>
-
-    <p class="arch-source" data-reveal><span class="badge badge--source">Documented</span>Documented project architecture — Secure Microservices Platform, IDBI Intech</p>
-
-    
-<figure class="arch-figure" data-reveal>
-  <svg class="arch-svg" viewBox="0 0 960 470" role="img"
-       aria-labelledby="arch-svg-title arch-svg-desc" preserveAspectRatio="xMidYMid meet">
-    <title id="arch-svg-title">Secure microservices architecture</title>
-    <desc id="arch-svg-desc">A React.js client sends AES-encrypted requests to a Spring Cloud Gateway Server, which authenticates against LDAP and filters calls. The gateway resolves services through a Eureka Server and routes to Spring Boot microservices, which exchange AES-encrypted data secured by multi-level JWT and database-driven tokens, and read and write to a MySQL or Oracle database through Hibernate.</desc>
-
-    <defs>
-      <marker id="arw" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-        <path d="M0 1.2 9 5 0 8.8Z" fill="var(--arch-line)"/>
-      </marker>
-    </defs>
-
-    <!-- lane labels -->
-    <g class="arch-lane">
-      <text x="20" y="52">CLIENT</text>
-      <text x="20" y="169">EDGE</text>
-      <text x="20" y="289">PLATFORM</text>
-      <text x="20" y="419">DATA</text>
-    </g>
-
-    <!-- client -->
-    <g class="arch-node">
-      <rect x="410" y="22" width="240" height="62" rx="14"/>
-      <text class="arch-title" x="530" y="48">React.js frontend</text>
-      <text class="arch-sub" x="530" y="68">LDAP login &#183; AES-encrypted payloads</text>
-    </g>
-
-    <!-- gateway -->
-    <g class="arch-node arch-node--accent">
-      <rect x="380" y="130" width="300" height="70" rx="14"/>
-      <text class="arch-title" x="530" y="158">Spring Cloud Gateway Server</text>
-      <text class="arch-sub" x="530" y="180">Centralised auth &#183; call filtering</text>
-    </g>
-
-    <!-- ldap -->
-    <g class="arch-node arch-node--sec">
-      <rect x="130" y="132" width="200" height="66" rx="14"/>
-      <text class="arch-title" x="230" y="159">LDAP directory</text>
-      <text class="arch-sub" x="230" y="180">Enterprise authentication</text>
-    </g>
-
-    <!-- eureka -->
-    <g class="arch-node arch-node--sec">
-      <rect x="736" y="132" width="204" height="66" rx="14"/>
-      <text class="arch-title" x="838" y="159">Eureka Server</text>
-      <text class="arch-sub" x="838" y="180">Discovery &#183; load balancing</text>
-    </g>
-
-    <!-- microservices -->
-    <g class="arch-node">
-      <rect x="150" y="252" width="196" height="66" rx="14"/>
-      <text class="arch-title" x="248" y="279">Microservice</text>
-      <text class="arch-sub" x="248" y="300">Spring Boot &#183; Java 17</text>
-    </g>
-    <g class="arch-node">
-      <rect x="432" y="252" width="196" height="66" rx="14"/>
-      <text class="arch-title" x="530" y="279">Microservice</text>
-      <text class="arch-sub" x="530" y="300">Spring Boot &#183; Java 17</text>
-    </g>
-    <g class="arch-node">
-      <rect x="714" y="252" width="196" height="66" rx="14"/>
-      <text class="arch-title" x="812" y="279">Microservice</text>
-      <text class="arch-sub" x="812" y="300">7+ services deployed</text>
-    </g>
-
-    <!-- database -->
-    <g class="arch-node arch-node--data">
-      <rect x="410" y="382" width="240" height="66" rx="14"/>
-      <text class="arch-title" x="530" y="409">MySQL / Oracle</text>
-      <text class="arch-sub" x="530" y="430">Hibernate &#183; token store</text>
-    </g>
-
-    <!-- edges -->
-    <g class="arch-edge">
-      <path d="M530 84 V130" marker-end="url(#arw)"/>
-      <path d="M380 165 H336" marker-end="url(#arw)"/>
-      <path d="M680 165 H730" marker-end="url(#arw)"/>
-      <path d="M500 200 V226 H248 V252" marker-end="url(#arw)"/>
-      <path d="M530 200 V252" marker-end="url(#arw)"/>
-      <path d="M560 200 V226 H812 V252" marker-end="url(#arw)"/>
-      <path d="M248 318 V352 H530 V382" marker-end="url(#arw)"/>
-      <path d="M530 318 V382" marker-end="url(#arw)"/>
-      <path d="M812 318 V352 H530"/>
-    </g>
-
-    <g class="arch-edge-label">
-      <text x="542" y="112">AES / HTTPS</text>
-      <text x="542" y="228">JWT + DB token</text>
-      <text x="542" y="370">Hibernate</text>
-    </g>
-  </svg>
-  <figcaption class="arch-caption">
-    Secure microservices platform — request path from the React.js client through the gateway to the Spring Boot services and database.
-  </figcaption>
-</figure>
-
-    <div class="arch-layers">
-      
-        <section class="arch-layer" data-reveal data-reveal-delay="0" aria-label="Client layer">
-          <h3>Client</h3>
-          <ul role="list">
-            <li><strong>React.js frontend</strong><span>LDAP login screen, AES-encrypted request/response payloads</span></li>
-          </ul>
-        </section>
-        <section class="arch-layer" data-reveal data-reveal-delay="1" aria-label="Edge layer">
-          <h3>Edge</h3>
-          <ul role="list">
-            <li><strong>Spring Cloud Gateway Server</strong><span>Centralised authentication and call filtering for every inbound request</span></li>
-          </ul>
-        </section>
-        <section class="arch-layer" data-reveal data-reveal-delay="2" aria-label="Platform layer">
-          <h3>Platform</h3>
-          <ul role="list">
-            <li><strong>Eureka Server</strong><span>Service discovery and load balancing</span></li><li><strong>Spring Boot microservices</strong><span>7+ services, each exchanging AES-encrypted data</span></li>
-          </ul>
-        </section>
-        <section class="arch-layer" data-reveal data-reveal-delay="0" aria-label="Security layer">
-          <h3>Security</h3>
-          <ul role="list">
-            <li><strong>LDAP authentication</strong><span>Enterprise directory login at the edge</span></li><li><strong>Multi-level JWT &amp; database-driven tokens</strong><span>Secures inter-service communication</span></li><li><strong>AES encryption (PKCS7)</strong><span>End-to-end encrypted data exchange</span></li>
-          </ul>
-        </section>
-        <section class="arch-layer" data-reveal data-reveal-delay="1" aria-label="Data layer">
-          <h3>Data</h3>
-          <ul role="list">
-            <li><strong>MySQL / Oracle</strong><span>Accessed through Hibernate; hosts the token store</span></li>
-          </ul>
-        </section>
-    </div>
-
-    <p class="arch-runtime" data-reveal><span>Runtime &amp; delivery</span></p>
-    <ul class="chips chips--tech" role="list"><li class="chip">Java 17</li><li class="chip">Spring Boot</li><li class="chip">Hibernate</li><li class="chip">Tomcat</li><li class="chip">Docker</li><li class="chip">CI/CD pipelines</li></ul>
   </div>
 </section>
 
@@ -880,7 +733,7 @@
     </p>
     <nav class="footer-nav" aria-label="Footer">
       <ul>
-        <li><a href="#about">About</a></li><li><a href="#experience">Experience</a></li><li><a href="#projects">Projects</a></li><li><a href="#architecture">Architecture</a></li><li><a href="#skills">Skills</a></li><li><a href="#education">Education</a></li><li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li><li><a href="#experience">Experience</a></li><li><a href="#projects">Projects</a></li><li><a href="#skills">Skills</a></li><li><a href="#education">Education</a></li><li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
     <p class="footer-meta">&copy; 2026 Onkar K. Pawar. Built as a static site.</p>

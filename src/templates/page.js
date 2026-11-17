@@ -5,7 +5,6 @@ import {
   renderImpact,
   renderExperience,
   renderProjects,
-  renderArchitecture,
   renderSkills,
   renderCredentials,
   renderContact,
@@ -23,7 +22,6 @@ export function renderPage({
   experience,
   projects,
   skills,
-  architecture,
   education,
   certifications,
   awards,
@@ -160,7 +158,6 @@ ${renderAbout(profile, education)}
 ${renderImpact(achievements)}
 ${renderExperience(experience)}
 ${renderProjects(projects)}
-${renderArchitecture(architecture)}
 ${renderSkills(skills)}
 ${renderCredentials(education, certifications, awards)}
 ${renderContact(profile)}

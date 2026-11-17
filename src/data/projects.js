@@ -5,44 +5,33 @@
  */
 export const projects = [
   {
-    id: 'secure-microservices',
-    name: 'Secure Microservices Platform',
-    context: 'IDBI Intech — built from scratch',
+    id: 'pfms-bank-integration',
+    name: 'PFMS Bank Integration Services &mdash; CSB Bank &amp; Equitas Bank',
+    context: 'IDBI Intech &mdash; two bank clients',
     featured: true,
     purpose:
-      'A secure, scalable microservices architecture with LDAP authentication and end-to-end encrypted communication between every service in the platform.',
-    role: 'Senior Executive — designed and built the platform from scratch',
+      'A suite of Spring Boot batch and integration services that connect the Public Financial Management System (PFMS/CPSMS) to two banks &mdash; payment requests and responses, account validation, balances, statements and reconciliation reports.',
+    role: 'Senior Executive &mdash; developer of the integration services',
     responsibilities: [
-      'Built a React.js frontend with LDAP login and AES encryption for secure client-to-server communication.',
-      'Implemented a Gateway Server for centralized authentication and call filtering across the platform.',
-      'Secured inter-service communication with multi-level JWT-based and database-driven token authentication.',
-      'Applied end-to-end AES encryption with PKCS7 padding for data exchange between the Gateway Server, Eureka Server and the microservices.',
-      'Leveraged Eureka for service discovery and load balancing to ensure reliability and performance.'
+      'Built 20+ independent Spring Boot services (about 52K lines of Java): payment request and response, account validation, acknowledgement reader, pull/push file transfer, transaction balance and history, quarterly interest, DSC enrollment, FCRA account report and NACH file generation.',
+      'CSB Bank: integrated through the bank&rsquo;s APIs &mdash; OAuth2 client-credentials tokens, reactive WebClient calls and encrypted request/response payloads.',
+      'Equitas Bank: integrated through database linkage, with Oracle-backed payment tables, batch queries and status tracking (initiated, success, rejected).',
+      'Processed payment files with XSD validation and XML digital-signature (DSC) verification; scheduled jobs with cron-driven triggers and a toggle to pause them; SFTP transfers and e-mail alerts on failures and reminders.',
+      'Added a React screen to fetch bank balances.'
     ],
-    platform: ['React.js', 'Spring Boot', 'Java 17', 'Hibernate'],
-    database: ['MySQL', 'Oracle'],
-    webserver: ['Tomcat'],
+    platform: ['Java', 'Spring Boot', 'Spring Data JPA', 'Spring WebFlux', 'React'],
+    database: ['Oracle', 'MySQL'],
+    webserver: [],
     security: [
-      'LDAP authentication',
-      'AES encryption (PKCS7 padding)',
-      'Multi-level JWT authentication',
-      'Database-driven token authentication',
-      'Gateway call filtering'
+      'OAuth2 client-credentials',
+      'AES / RSA encryption',
+      'XML digital-signature (DSC) verification',
+      'Encrypted configuration passwords'
     ],
-    tech: [
-      'React.js',
-      'Crypto (AES)',
-      'Spring Boot',
-      'Spring Cloud Gateway',
-      'Eureka',
-      'JWT',
-      'Hibernate',
-      'SQL'
-    ],
+    tech: ['Java', 'Spring Boot', 'WebClient', 'Oracle', 'XML / XSD', 'SFTP (JSch)', 'Cron scheduling', 'Logback'],
     impact: [
-      '70% improvement in application performance through microservices architecture.',
-      '40% increase in enterprise security compliance through LDAP and multi-level JWT authentication.',
-      '7+ microservices architected and deployed with Docker and CI/CD pipelines.'
+      'Delivered for two bank clients on the same PFMS payment flow, using two integration styles (API and database linkage).',
+      'Reusable service pattern across both banks: scheduler, mail alerts, DB health check and centralised exception handling.'
     ]
   },
   {
@@ -161,5 +150,5 @@ export const projects = [
   }
 ];
 
-// Newest flagship project first.
+// Newest flagship projects first.
 projects.unshift(...projects.splice(2, 1));

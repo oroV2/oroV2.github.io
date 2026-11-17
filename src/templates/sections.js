@@ -21,7 +21,6 @@ export const navItems = [
   { href: '#about', label: 'About' },
   { href: '#experience', label: 'Experience' },
   { href: '#projects', label: 'Projects' },
-  { href: '#architecture', label: 'Architecture' },
   { href: '#skills', label: 'Skills' },
   { href: '#education', label: 'Education' },
   { href: '#contact', label: 'Contact' }
