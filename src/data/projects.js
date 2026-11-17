@@ -88,4 +88,78 @@ export const projects = [
       '15% reduction in system downtime through performance enhancements and product updates.'
     ]
   }
+  ,{
+    id: 'koshanvaya-erp',
+    name: 'Koshanvaya &mdash; Manufacturing &amp; Job-Work ERP',
+    context: 'Independent client project &mdash; designed and built solo',
+    featured: true,
+    purpose:
+      'A ledger-first ERP for Indian job-work manufacturers: sales, procurement, job work, stores, quality, production, GST/TDS compliance and the books in one application, so every lot and every rupee is traceable from order to payment.',
+    role: 'Sole engineer &mdash; requirements, architecture, database design, backend, front end, CI and deployment',
+    responsibilities: [
+      'Built a modular monolith (24 domain modules, verified by Spring Modulith): ~29K lines of Java across 351 classes, ~200 REST endpoints and ~30K lines of React + TypeScript.',
+      'Designed the ledger core: every business document posts stock movements and balanced journal lines in one transaction; ledgers are append-only, periods can be locked, document numbers are gap-free and posting is idempotent.',
+      'Modelled Indian statutory rules as versioned data: GST (CGST/SGST/IGST, reverse charge, exports under LUT), GSTR-1/3B and GSTR-2B reconciliation, TDS, MSME dues and interest, ITC-04 job-work returns.',
+      'Delivered BOM costing and MRP, production orders, approvals, budgets, fixed assets, bank reconciliation, partner portals and an installable stores app.',
+      'Shipped it end to end: 25 Flyway migrations, GitHub Actions CI against Oracle Database Free, a customer-provisioning CLI, and deployment behind nginx with Let&rsquo;s Encrypt HTTPS and systemd.'
+    ],
+    platform: ['Spring Boot 4', 'Spring Modulith', 'React', 'TypeScript'],
+    database: ['Oracle Database 23ai (Autonomous)'],
+    webserver: ['nginx', 'systemd', 'Oracle Linux'],
+    security: [
+      'Oracle Virtual Private Database tenant isolation (fails closed)',
+      'DB triggers enforcing append-only ledgers and period locks',
+      'PBKDF2-HMAC-SHA256 (600K iterations) password hashing',
+      'Hashed session tokens',
+      'Scoped, rate-limited API keys',
+      'Role-based desks and partner portals'
+    ],
+    tech: ['Java', 'Spring Boot', 'Spring Modulith', 'Oracle 23ai', 'Flyway', 'React', 'TypeScript', 'GitHub Actions', 'nginx'],
+    impact: [
+      '369 automated tests (API, ledger golden-scenario and module-boundary tests) run in CI.',
+      'Worked export order posts 15 documents end to end, passes all 10 ledger-integrity checks and reports a 22.8% order margin (&#8377;95,250 on &#8377;4.18 lakh of export sales).',
+      'Built in about a month: 81 commits, 351 Java classes, 25 migrations.'
+    ]
+  },
+  {
+    id: 'arthasetu',
+    name: 'Arthasetu &mdash; Government Finance Console',
+    context: 'Personal design prototype &mdash; <a href="https://arthasetu-ui.pages.dev/applications" rel="noopener">arthasetu-ui.pages.dev</a>',
+    featured: false,
+    purpose:
+      'A console concept that brings PFMS, the Receipts &amp; Payments Portal (RPP), TNPFTS and IFMS Rajasthan into one application launcher. All figures on screen are illustrative fixture data.',
+    role: 'Designer and front-end developer',
+    responsibilities: [
+      'Built a React single-page app with an application launcher, UAT environment indicator, maker role context and global search.',
+      'Designed a dark, dense UI system for finance operators, hosted on Cloudflare Pages.'
+    ],
+    platform: ['React', 'Cloudflare Pages'],
+    database: [],
+    webserver: [],
+    security: ['Maker / checker role context in the UI'],
+    tech: ['React', 'JavaScript', 'Cloudflare Pages'],
+    impact: ['Live, shareable prototype of a unified public-finance workspace.']
+  },
+  {
+    id: 'blacktech',
+    name: 'Black Tech Secure Solutions &mdash; Company Website',
+    context: 'Independent project &mdash; <a href="https://blacktechsecuresolutions.in" rel="noopener">blacktechsecuresolutions.in</a>',
+    featured: false,
+    purpose:
+      'The website for a security-first software engineering practice offering web, mobile, enterprise/API, cloud and AI services.',
+    role: 'Designer and developer',
+    responsibilities: [
+      'Designed and built a responsive dark/light site with interactive service and process sections and a project-request form.',
+      'Added SEO metadata and Open Graph tags; launched on a custom domain with business email.'
+    ],
+    platform: ['Web', 'Custom domain'],
+    database: [],
+    webserver: [],
+    security: ['Security-first positioning and secure-by-default practices'],
+    tech: ['HTML', 'CSS', 'JavaScript', 'SEO'],
+    impact: ['Live company presence with a clear services and capabilities story.']
+  }
 ];
+
+// Newest flagship project first.
+projects.unshift(...projects.splice(2, 1));

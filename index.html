@@ -398,7 +398,39 @@
 
     <div class="project-grid">
       
-        <article class="project-card" data-reveal data-reveal-delay="0" aria-labelledby="project-secure-microservices">
+        <article class="project-card" data-reveal data-reveal-delay="0" aria-labelledby="project-koshanvaya-erp">
+          <div class="project-top">
+            <p class="project-context">Independent client project &mdash; designed and built solo</p>
+            <h3 id="project-koshanvaya-erp">Koshanvaya &mdash; Manufacturing &amp; Job-Work ERP</h3>
+            <p class="project-purpose">A ledger-first ERP for Indian job-work manufacturers: sales, procurement, job work, stores, quality, production, GST/TDS compliance and the books in one application, so every lot and every rupee is traceable from order to payment.</p>
+          </div>
+
+          <p class="project-role"><span class="project-role-key">Role</span>Sole engineer &mdash; requirements, architecture, database design, backend, front end, CI and deployment</p>
+
+          <div class="project-block">
+            <h4>What I built</h4>
+            <ul class="bullets bullets--sm"><li>Built a modular monolith (24 domain modules, verified by Spring Modulith): ~29K lines of Java across 351 classes, ~200 REST endpoints and ~30K lines of React + TypeScript.</li><li>Designed the ledger core: every business document posts stock movements and balanced journal lines in one transaction; ledgers are append-only, periods can be locked, document numbers are gap-free and posting is idempotent.</li><li>Modelled Indian statutory rules as versioned data: GST (CGST/SGST/IGST, reverse charge, exports under LUT), GSTR-1/3B and GSTR-2B reconciliation, TDS, MSME dues and interest, ITC-04 job-work returns.</li><li>Delivered BOM costing and MRP, production orders, approvals, budgets, fixed assets, bank reconciliation, partner portals and an installable stores app.</li><li>Shipped it end to end: 25 Flyway migrations, GitHub Actions CI against Oracle Database Free, a customer-provisioning CLI, and deployment behind nginx with Let&rsquo;s Encrypt HTTPS and systemd.</li></ul>
+          </div>
+
+          <div class="project-block">
+            <h4><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3 4.5 6v5.5c0 4.4 3.1 7.9 7.5 9.5 4.4-1.6 7.5-5.1 7.5-9.5V6L12 3Z"/><path d="M9.5 12.2 11.4 14l3.4-3.6"/></svg><span>Security</span></h4>
+            <ul class="chips chips--sec" role="list"><li class="chip">Oracle Virtual Private Database tenant isolation (fails closed)</li><li class="chip">DB triggers enforcing append-only ledgers and period locks</li><li class="chip">PBKDF2-HMAC-SHA256 (600K iterations) password hashing</li><li class="chip">Hashed session tokens</li><li class="chip">Scoped, rate-limited API keys</li><li class="chip">Role-based desks and partner portals</li></ul>
+          </div>
+
+          <dl class="project-meta">
+            <div class="meta-row"><dt>Platform</dt><dd>Spring Boot 4 &middot; Spring Modulith &middot; React &middot; TypeScript</dd></div>
+            <div class="meta-row"><dt>Database</dt><dd>Oracle Database 23ai (Autonomous)</dd></div>
+            <div class="meta-row"><dt>App server</dt><dd>nginx &middot; systemd &middot; Oracle Linux</dd></div>
+          </dl>
+
+          <div class="project-block">
+            <h4>Impact</h4>
+            <ul class="bullets bullets--sm bullets--impact"><li>369 automated tests (API, ledger golden-scenario and module-boundary tests) run in CI.</li><li>Worked export order posts 15 documents end to end, passes all 10 ledger-integrity checks and reports a 22.8% order margin (&#8377;95,250 on &#8377;4.18 lakh of export sales).</li><li>Built in about a month: 81 commits, 351 Java classes, 25 migrations.</li></ul>
+          </div>
+
+          <ul class="chips chips--tech" role="list"><li class="chip">Java</li><li class="chip">Spring Boot</li><li class="chip">Spring Modulith</li><li class="chip">Oracle 23ai</li><li class="chip">Flyway</li><li class="chip">React</li><li class="chip">TypeScript</li><li class="chip">GitHub Actions</li><li class="chip">nginx</li></ul>
+        </article>
+        <article class="project-card" data-reveal data-reveal-delay="1" aria-labelledby="project-secure-microservices">
           <div class="project-top">
             <p class="project-context">IDBI Intech — built from scratch</p>
             <h3 id="project-secure-microservices">Secure Microservices Platform</h3>
@@ -430,7 +462,7 @@
 
           <ul class="chips chips--tech" role="list"><li class="chip">React.js</li><li class="chip">Crypto (AES)</li><li class="chip">Spring Boot</li><li class="chip">Spring Cloud Gateway</li><li class="chip">Eureka</li><li class="chip">JWT</li><li class="chip">Hibernate</li><li class="chip">SQL</li></ul>
         </article>
-        <article class="project-card" data-reveal data-reveal-delay="1" aria-labelledby="project-expenzing-mobile">
+        <article class="project-card" data-reveal data-reveal-delay="2" aria-labelledby="project-expenzing-mobile">
           <div class="project-top">
             <p class="project-context">Nexstep Infotech Pvt Ltd (Expenzing)</p>
             <h3 id="project-expenzing-mobile">Expenzing P2P &amp; TEM Mobile Applications</h3>
@@ -461,6 +493,70 @@
           </div>
 
           <ul class="chips chips--tech" role="list"><li class="chip">Java</li><li class="chip">React Native</li><li class="chip">Node.js</li><li class="chip">JBoss</li><li class="chip">WildFly</li><li class="chip">MySQL</li><li class="chip">Oracle</li><li class="chip">OCR</li><li class="chip">Google Maps services</li></ul>
+        </article>
+        <article class="project-card" data-reveal data-reveal-delay="3" aria-labelledby="project-arthasetu">
+          <div class="project-top">
+            <p class="project-context">Personal design prototype &mdash; <a href="https://arthasetu-ui.pages.dev/applications" rel="noopener">arthasetu-ui.pages.dev</a></p>
+            <h3 id="project-arthasetu">Arthasetu &mdash; Government Finance Console</h3>
+            <p class="project-purpose">A console concept that brings PFMS, the Receipts &amp; Payments Portal (RPP), TNPFTS and IFMS Rajasthan into one application launcher. All figures on screen are illustrative fixture data.</p>
+          </div>
+
+          <p class="project-role"><span class="project-role-key">Role</span>Designer and front-end developer</p>
+
+          <div class="project-block">
+            <h4>What I built</h4>
+            <ul class="bullets bullets--sm"><li>Built a React single-page app with an application launcher, UAT environment indicator, maker role context and global search.</li><li>Designed a dark, dense UI system for finance operators, hosted on Cloudflare Pages.</li></ul>
+          </div>
+
+          <div class="project-block">
+            <h4><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3 4.5 6v5.5c0 4.4 3.1 7.9 7.5 9.5 4.4-1.6 7.5-5.1 7.5-9.5V6L12 3Z"/><path d="M9.5 12.2 11.4 14l3.4-3.6"/></svg><span>Security</span></h4>
+            <ul class="chips chips--sec" role="list"><li class="chip">Maker / checker role context in the UI</li></ul>
+          </div>
+
+          <dl class="project-meta">
+            <div class="meta-row"><dt>Platform</dt><dd>React &middot; Cloudflare Pages</dd></div>
+            
+            
+          </dl>
+
+          <div class="project-block">
+            <h4>Impact</h4>
+            <ul class="bullets bullets--sm bullets--impact"><li>Live, shareable prototype of a unified public-finance workspace.</li></ul>
+          </div>
+
+          <ul class="chips chips--tech" role="list"><li class="chip">React</li><li class="chip">JavaScript</li><li class="chip">Cloudflare Pages</li></ul>
+        </article>
+        <article class="project-card" data-reveal data-reveal-delay="4" aria-labelledby="project-blacktech">
+          <div class="project-top">
+            <p class="project-context">Independent project &mdash; <a href="https://blacktechsecuresolutions.in" rel="noopener">blacktechsecuresolutions.in</a></p>
+            <h3 id="project-blacktech">Black Tech Secure Solutions &mdash; Company Website</h3>
+            <p class="project-purpose">The website for a security-first software engineering practice offering web, mobile, enterprise/API, cloud and AI services.</p>
+          </div>
+
+          <p class="project-role"><span class="project-role-key">Role</span>Designer and developer</p>
+
+          <div class="project-block">
+            <h4>What I built</h4>
+            <ul class="bullets bullets--sm"><li>Designed and built a responsive dark/light site with interactive service and process sections and a project-request form.</li><li>Added SEO metadata and Open Graph tags; launched on a custom domain with business email.</li></ul>
+          </div>
+
+          <div class="project-block">
+            <h4><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3 4.5 6v5.5c0 4.4 3.1 7.9 7.5 9.5 4.4-1.6 7.5-5.1 7.5-9.5V6L12 3Z"/><path d="M9.5 12.2 11.4 14l3.4-3.6"/></svg><span>Security</span></h4>
+            <ul class="chips chips--sec" role="list"><li class="chip">Security-first positioning and secure-by-default practices</li></ul>
+          </div>
+
+          <dl class="project-meta">
+            <div class="meta-row"><dt>Platform</dt><dd>Web &middot; Custom domain</dd></div>
+            
+            
+          </dl>
+
+          <div class="project-block">
+            <h4>Impact</h4>
+            <ul class="bullets bullets--sm bullets--impact"><li>Live company presence with a clear services and capabilities story.</li></ul>
+          </div>
+
+          <ul class="chips chips--tech" role="list"><li class="chip">HTML</li><li class="chip">CSS</li><li class="chip">JavaScript</li><li class="chip">SEO</li></ul>
         </article>
     </div>
   </div>
