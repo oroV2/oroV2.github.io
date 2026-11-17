@@ -7,7 +7,7 @@
 export const profile = {
   name: 'Onkar K. Pawar',
   shortName: 'Onkar Pawar',
-  title: 'Java Backend Developer',
+  title: 'Senior Java Developer',
   currentRole: 'Senior Executive',
   currentCompany: 'IDBI Intech',
   // Positioning line from the profile banner supplied in the Resume folder.

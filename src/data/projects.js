@@ -7,7 +7,7 @@ export const projects = [
   {
     id: 'pfms-bank-integration',
     name: 'PFMS Bank Integration Services &mdash; CSB Bank &amp; Equitas Bank',
-    context: 'IDBI Intech &mdash; two bank clients',
+    context: 'IDBI Intech &mdash; two bank clients &middot; developed with ChatGPT (free version) assistance',
     featured: true,
     purpose:
       'A suite of Spring Boot batch and integration services that connect the Public Financial Management System (PFMS/CPSMS) to two banks &mdash; payment requests and responses, account validation, balances, statements and reconciliation reports.',
@@ -80,11 +80,11 @@ export const projects = [
   ,{
     id: 'koshanvaya-erp',
     name: 'Koshanvaya &mdash; Manufacturing &amp; Job-Work ERP',
-    context: 'Independent client project &mdash; designed and built solo',
+    context: 'Independent client project &mdash; built solo with Claude.ai assistance',
     featured: true,
     purpose:
       'A ledger-first ERP for Indian job-work manufacturers: sales, procurement, job work, stores, quality, production, GST/TDS compliance and the books in one application, so every lot and every rupee is traceable from order to payment.',
-    role: 'Sole engineer &mdash; requirements, architecture, database design, backend, front end, CI and deployment',
+    role: 'Sole developer, using Claude.ai as an AI pair-programmer &mdash; I owned requirements, architecture, review, testing and deployment',
     responsibilities: [
       'Built a modular monolith (24 domain modules, verified by Spring Modulith): ~29K lines of Java across 351 classes, ~200 REST endpoints and ~30K lines of React + TypeScript.',
       'Designed the ledger core: every business document posts stock movements and balanced journal lines in one transaction; ledgers are append-only, periods can be locked, document numbers are gap-free and posting is idempotent.',
@@ -113,7 +113,7 @@ export const projects = [
   {
     id: 'arthasetu',
     name: 'Arthasetu &mdash; Government Finance Console',
-    context: 'Personal design prototype &mdash; <a href="https://arthasetu-ui.pages.dev/applications" rel="noopener">arthasetu-ui.pages.dev</a>',
+    context: 'Personal design prototype &middot; built with Claude.ai assistance &mdash; <a href="https://arthasetu-ui.pages.dev/applications" rel="noopener">arthasetu-ui.pages.dev</a>',
     featured: false,
     purpose:
       'A console concept that brings PFMS, the Receipts &amp; Payments Portal (RPP), TNPFTS and IFMS Rajasthan into one application launcher. All figures on screen are illustrative fixture data.',
@@ -132,7 +132,7 @@ export const projects = [
   {
     id: 'blacktech',
     name: 'Black Tech Secure Solutions &mdash; Company Website',
-    context: 'Independent project &mdash; <a href="https://blacktechsecuresolutions.in" rel="noopener">blacktechsecuresolutions.in</a>',
+    context: 'Independent project &middot; built with Claude.ai assistance &mdash; <a href="https://blacktechsecuresolutions.in" rel="noopener">blacktechsecuresolutions.in</a>',
     featured: false,
     purpose:
       'The website for a security-first software engineering practice offering web, mobile, enterprise/API, cloud and AI services.',

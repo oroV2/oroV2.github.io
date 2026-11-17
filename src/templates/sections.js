@@ -283,7 +283,7 @@ export const renderProjects = (projects) => `
     ${sectionHead(
       'Work',
       'Selected projects',
-      'Enterprise projects are described at a professional level only — no client data, credentials, endpoints or proprietary code is published.',
+      'Enterprise projects are described at a professional level only — no client data, credentials, endpoints or proprietary code is published. AI assistants (Claude.ai, ChatGPT) were used on the projects below, as noted on each card; I review and test everything I ship.',
       'projects'
     )}
 
